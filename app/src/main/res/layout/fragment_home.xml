@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.fragment.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi Lalala Shop"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to StokSync"
+                android:textSize="24sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp" />
+
+            <Spinner
+                android:id="@+id/item_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/appbar_background"
+                android:backgroundTint="#15FE1515"
+                android:padding="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/restock_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't Forget to Restock Your Inventory"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/restock_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your stock is starting to run low and is approaching your minimum threshold."
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:padding="8dp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="18dp"
+                >
+
+                <ImageView
+                    android:id="@+id/graph_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/current_graph"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/stock_updates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock Updates"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="32dp"
+                    android:textColor="#000000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/shopee_logo"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/shopee"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/shopee_stocks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150 pcs"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/shopee_logo"
+                            android:layout_marginStart="8dp" />
+
+                        <ImageView
+                            android:id="@+id/shopee_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add"
+                            android:layout_toEndOf="@id/shopee_stocks"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/shopee_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shopee"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:layout_toEndOf="@id/shopee_logo"
+                        android:layout_marginStart="8dp"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+
+                    <ImageView
+                        android:id="@+id/tokopedia_logo"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/tokopedia"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:id="@+id/tokopedia_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tokopedia"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:layout_toEndOf="@id/tokopedia_logo"
+                        android:layout_marginStart="8dp"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/tokopedia_stocks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150 pcs"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/shopee_logo"
+                            android:layout_marginStart="8dp" />
+
+                        <ImageView
+                            android:id="@+id/tokopedia_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add"
+                            android:layout_toEndOf="@id/shopee_stocks"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/zalora_logo"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/zalora"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        >
+
+                        <TextView
+                            android:id="@+id/zalora_stocks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="150 pcs"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/shopee_logo"
+                            android:layout_marginStart="8dp" />
+
+                        <ImageView
+                            android:id="@+id/zalora_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add"
+                            android:layout_toEndOf="@id/shopee_stocks"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/zalora_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zalora"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:layout_toEndOf="@id/zalora_logo"
+                        android:layout_marginStart="8dp"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
